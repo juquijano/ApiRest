@@ -1,14 +1,20 @@
 # ApiRest
+
 >La API está desarrollada con Spark y Elasticsearch Rest High Level Client para almacenar items con ciertos key-values. 
+>
 >Está pensada para escuchar sobre localhost en el puerto 8080 y con HTTP/1.1
+>
 >Puede recibir métodos POST, GET, PUT y DELETE.
 >
 # POST
 >Para ejecutar un post: 
+>
 `curl -X POST localhost:8080/<ID>\
 -H "Content-Type: application/json" \
 -d '<BODY>'`
+>
 >done el parámetro <ID> identifica al item y el <BODY> debe ser un json con los campos como el siguiente ejemplo:
+>
   `
          "title": "Item de test - P Ofertar",
         "category_id": "MLA5529",
@@ -30,13 +36,15 @@
             }
         ]
   `
+>
 >En caso de una inserción correcta, se debolverá un mensaje de "SUCCESS" con estatus 200.
 >
 # GET
 >Para ejecutar un get sobre un item: 
-`curl -X POST localhost:8080/<ID>\
--H "Content-Type: application/json" \
--d '<BODY>'`
+>
+  `curl -X POST localhost:8080/<ID>\ 
+  -H "Content-Type: application/json" \
+  -d '<BODY>'`
 >
 >
 >
