@@ -7,14 +7,14 @@
 >Puede recibir métodos POST, GET, PUT y DELETE.
 >
 
-# POST
+### POST
 >Para ejecutar un post: 
 
 `curl -X POST localhost:8080/items/<ID>\
 -H "Content-Type: application/json" \
 -d '<BODY>'`
 >
->done el parámetro \<ID\> identifica al item y el \<BODY\> debe ser un json con los campos como el siguiente ejemplo:
+>donde el parámetro \<ID\> identifica al item y el \<BODY\> debe ser un json con los campos como el siguiente ejemplo:
 >
     {
 
@@ -58,38 +58,37 @@
     }
 
 >
->En caso de una inserción correcta, se debolverá un mensaje de "SUCCESS" con estatus 200.
+>En caso de una inserción correcta, se devolverá un mensaje de "SUCCESS" con estatus 200.
 >
   
-# GET (un item)
+### GET (obtiene un item a través de un id)
 >Para ejecutar un get sobre un item: 
 
-  `curl -X POST localhost:8080/items/<ID>`
+  `curl -X GET localhost:8080/items/<ID>`
 
 >Responderá con un mensaje de "SUCCESS" y la data del item en formato Json con status 200.
 
   
-# GET (todos los items)
+### GET (obtiene todos los items)
 >Para ejecutar un get sobre todos los items: 
 
-  `curl -X POST localhost:8080/items`
+  `curl -X GET localhost:8080/items`
 
 >Responderá con un mensaje de "SUCCESS" y la data de todos los items en formato Json con status 200.
 
 >
-# PUT (todos los items)
->Para ejecutar un get sobre todos los items: 
+### PUT (modifica un item)
+>Para ejecutar un put sobre un item se debe especificar el \<ID\> y alguna de las key con su nuevo value: 
 
-  `curl -X POST localhost:8080/items`
+  `curl -X PUT localhost:8080/items/<ID>`
 
->Responderá con un mensaje de "SUCCESS" y la data de todos los items en formato Json con status 200.
+>Responderá con un mensaje de "SUCCESS" con status 200.
 
->
->
->
->
->
->
->
->
+>### DELETE (borra un item)
+>Para ejecutar un delete sobre un item se debe especificar el \<ID\>: 
+
+  `curl -X DELETE localhost:8080/items/<ID>`
+
+>Responderá con un mensaje de "SUCCESS" con status 200.
+
 >
